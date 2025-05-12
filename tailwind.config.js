@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
     content: [
       "./templates/**/*.twig", // Symfony šablony
       "./js/**/*.{js,ts,jsx,tsx}", // Všechny React/TS komponenty

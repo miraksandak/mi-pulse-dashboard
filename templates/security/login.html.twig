@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login | Mi Pulse{% endblock %}
+
+{% block body %}
+<section class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
+  <div class="max-w-md w-full">
+    <div class="flex justify-center mb-8">
+      <img src="/assets/logo.svg" alt="Mi Logo" class="h-20" />
+    </div>
+    <div class="bg-white shadow rounded-lg p-8">
+      <h1 class="text-2xl font-bold text-center mb-6 text-gray-800">
+        Sign in to Mi Pulse
+      </h1>
+
+      {% if error %}
+        <div class="text-red-600 text-sm mb-4 text-center">
+          {{ error.messageKey|trans(error.messageData, 'security') }}
+        </div>
+      {% endif %}
+
+      <form method="post" action="{{ path('app_login') }}">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+        <div class="mb-4">
+          <label for="email" class="block mb-1 text-sm text-gray-700">Username or Email</label>
+          <input type="text" id="email" name="email" value="{{ last_username }}" required autofocus
+            placeholder="e.g. jane.doe or jane@example.com"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500 text-sm text-gray-800" />
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="block mb-1 text-sm text-gray-700">Password</label>
+          <input type="password" id="password" name="password" required
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-500 text-sm text-gray-800" />
+        </div>
+
+        <div class="flex items-center mb-6">
+          <input id="remember" name="_remember_me" type="checkbox"
+            class="w-4 h-4 appearance-none bg-white border border-gray-300 rounded-sm checked:bg-blue-600 checked:border-transparent focus:ring-2 focus:ring-blue-500 transition" />
+          <label for="remember" class="ml-2 text-sm text-gray-600">Remember me</label>
+        </div>
+
+        <button type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded text-sm transition">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
