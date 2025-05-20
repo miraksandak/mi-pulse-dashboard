@@ -1309,6 +1309,13 @@ caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001716:
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001717.tgz"
   integrity sha512-auPpttCq6BDEG8ZAuHJIplGw6GODhjw+/11e7IjpnYCxZcW/ONgPs0KVBJ0d1bY3e2+7PRe5RCLyP+PfwVgkYw==
 
+cdur@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/cdur/-/cdur-0.3.1.tgz"
+  integrity sha512-IMhgCHovpEr1OgDH30HsMWjLZggmPCnMu61QCzRX7ETsBqGbbwgROfmYwjI58nSPt6sv0U7Rbo/gWBPD83hFGw==
+  dependencies:
+    react ">=18.0.0"
+
 chalk@^4.1.0:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -2253,7 +2260,7 @@ react-dom@^19.1.0:
   dependencies:
     scheduler "^0.26.0"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^19.1.0:
+"react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^19.1.0, react@>=18.0.0:
   version "19.1.0"
   resolved "https://registry.npmjs.org/react/-/react-19.1.0.tgz"
   integrity sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==

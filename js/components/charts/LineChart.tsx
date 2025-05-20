@@ -86,7 +86,7 @@ export default function LineChart({ title, labels, data, color, bgColor }: LineC
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition">
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow hover:shadow-lg transition">
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-5">{title}</h3>
       <Line ref={chartRef} data={chartData} options={options} />
     </div>

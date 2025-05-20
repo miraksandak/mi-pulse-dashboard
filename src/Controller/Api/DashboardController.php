@@ -11,6 +11,7 @@ class DashboardController extends AbstractController
     #[Route('/api/dashboard', name: 'api_dashboard', methods: ['GET'])]
     public function getDashboard(): JsonResponse
     {
+        sleep(1);
         return $this->json([
             'stats' => [
                 ['label' => 'Live Hotels', 'value' => 158, 'color' => '#14aa71'],

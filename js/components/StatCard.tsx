@@ -10,7 +10,7 @@ type StatCardProps = {
   export default function StatCard({ label, value, color, delay = 0 }: StatCardProps) {
     return (
       <div
-        className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-2xl px-8 py-6 shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700 animate-fadeInUp"
+        className="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-3xl px-8 py-6 shadow-sm hover:shadow-md transition border border-gray-100 dark:border-gray-700 animate-fadeInUp"
         style={{ animationDelay: `${delay}ms` }}
       >
         <div className="flex flex-col items-center justify-center text-center">

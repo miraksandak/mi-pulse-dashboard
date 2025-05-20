@@ -14,7 +14,7 @@ type DonutChartProps = {
 
 export default function DonutChart({ title, labels, data, colors, total }: DonutChartProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition">
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow hover:shadow-lg transition">
       <div className="flex flex-col items-center">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-5">{title}</h3>
 
